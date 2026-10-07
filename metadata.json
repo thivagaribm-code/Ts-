@@ -1,0 +1,6 @@
+{
+  "name": "TS Menswear | Spencer Plaza Chennai",
+  "description": "High-end luxury menswear & bespoke tailoring flagship located at Spencer Plaza, Chennai. Featuring motion lookbooks, curated formalwear, and contemporary silhouettes.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
