@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShoppingBag, Database, Scissors, Camera, Menu, X, Sparkles } from 'lucide-react';
+import { ShoppingBag, Database, Scissors, Camera, Menu, X, Sparkles, Film } from 'lucide-react';
 
 interface NavbarProps {
   cartCount: number;
@@ -45,9 +45,10 @@ export default function Navbar({
         <nav className="hidden lg:flex items-center gap-7 text-xs tracking-wider uppercase text-zinc-300 font-medium">
           <button
             onClick={() => handleNav('ensembles')}
-            className="hover:text-white transition-colors relative py-1 cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#c5a059] hover:after:w-full after:transition-all"
+            className="text-[#c5a059] hover:text-white transition-colors relative py-1 cursor-pointer flex items-center gap-1.5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#c5a059] hover:after:w-full after:transition-all font-semibold"
           >
-            Style Editions
+            <Film className="w-3.5 h-3.5 text-[#c5a059]" />
+            <span>Motion Videos</span>
           </button>
           <button
             onClick={() => handleNav('curation')}
@@ -69,7 +70,7 @@ export default function Navbar({
           </button>
           <button
             onClick={onOpenFittingRoom}
-            className="text-[#c5a059] hover:text-white transition-colors relative py-1 flex items-center gap-1.5 cursor-pointer"
+            className="text-zinc-300 hover:text-[#c5a059] transition-colors relative py-1 flex items-center gap-1.5 cursor-pointer"
           >
             <Camera className="w-3.5 h-3.5" />
             <span>Virtual Mirror</span>
@@ -128,9 +129,10 @@ export default function Navbar({
           <div className="flex flex-col space-y-3 text-sm text-zinc-300 font-medium">
             <button
               onClick={() => handleNav('ensembles')}
-              className="text-left py-2 hover:text-white border-b border-white/5 cursor-pointer"
+              className="text-left py-2 text-[#c5a059] flex items-center gap-2 border-b border-white/5 cursor-pointer font-semibold"
             >
-              Style Editions & Motion
+              <Film className="w-4 h-4 text-[#c5a059]" />
+              <span>Watch Motion Videos & Lookbook</span>
             </button>
             <button
               onClick={() => handleNav('curation')}

@@ -124,9 +124,10 @@ export default function HeroMotion({ onExploreClick, onBookFittingClick }: HeroM
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3.5">
           <button
             onClick={onExploreClick}
-            className="px-7 py-3 bg-white text-black hover:bg-[#c5a059] font-semibold text-xs uppercase tracking-wider rounded-md transition-all duration-200 shadow-xl cursor-pointer"
+            className="px-7 py-3 bg-[#c5a059] text-black hover:bg-white font-semibold text-xs uppercase tracking-wider rounded-md transition-all duration-200 shadow-xl cursor-pointer flex items-center gap-2"
           >
-            Explore Collections
+            <Film className="w-3.5 h-3.5" />
+            <span>Watch Motion Videos & Looks</span>
           </button>
           <button
             onClick={onBookFittingClick}
@@ -138,14 +139,14 @@ export default function HeroMotion({ onExploreClick, onBookFittingClick }: HeroM
         </div>
 
         {/* Video Interaction Bar */}
-        <div className="mt-10 flex items-center gap-3 text-xs text-zinc-400 bg-black/75 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10">
+        <div className="mt-10 flex items-center gap-3 text-xs text-zinc-400 bg-black/75 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
           <button
             onClick={togglePlay}
             className="flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer"
             aria-label={isPlaying ? "Pause cinematic background" : "Play cinematic background"}
           >
             {isPlaying ? <Pause className="w-3.5 h-3.5 text-[#c5a059]" /> : <Play className="w-3.5 h-3.5 text-[#c5a059]" />}
-            <span className="text-[11px]">{isPlaying ? 'Pause Motion' : 'Play Motion'}</span>
+            <span className="text-[11px]">{isPlaying ? 'Pause Hero Video' : 'Play Hero Video'}</span>
           </button>
           <span className="w-1 h-1 rounded-full bg-zinc-600" />
           <button
@@ -155,6 +156,13 @@ export default function HeroMotion({ onExploreClick, onBookFittingClick }: HeroM
           >
             {isMuted ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5 text-[#c5a059]" />}
             <span className="text-[11px]">{isMuted ? 'Unmute' : 'Mute'}</span>
+          </button>
+          <span className="w-1 h-1 rounded-full bg-zinc-600" />
+          <button
+            onClick={onExploreClick}
+            className="text-[11px] text-[#c5a059] hover:underline flex items-center gap-1 cursor-pointer font-medium"
+          >
+            <span>Explore 3 Video Clips ↓</span>
           </button>
         </div>
       </div>
